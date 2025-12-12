@@ -127,6 +127,30 @@
         .sticky-contact-bar.visible {
             transform: translateY(0);
         }
+
+        @media (max-width: 640px) {
+            .sticky-contact-bar {
+                padding-top: 0.35rem;
+                padding-bottom: 0.35rem;
+            }
+
+            .sticky-contact-bar .container {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            .sticky-contact-bar .contact-label {
+                display: none;
+            }
+
+            .sticky-contact-bar .contact-link {
+                width: 48px;
+                height: 48px;
+                padding: 0;
+                justify-content: center;
+                border-radius: 9999px;
+            }
+        }
         
         .timeline-step {
             opacity: 0;
@@ -252,25 +276,25 @@
 <body class="textured-bg">
     <!-- Sticky Contact Bar -->
     <div id="stickyContactBar" class="sticky-contact-bar bg-white shadow-lg border-t border-gray-200">
-        <div class="container mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center">
-            <div class="flex items-center space-x-4 mb-3 md:mb-0">
-                <a href="tel:07083477028" class="flex items-center space-x-2 text-charcoal hover:text-terracotta transition-colors" aria-label="Call us">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between gap-3 sm:gap-6 flex-wrap">
+            <div class="flex items-center gap-3 sm:gap-4 flex-wrap">
+                <a href="tel:07083477028" class="contact-link flex items-center gap-2 text-charcoal hover:text-terracotta transition-colors px-4 py-2 rounded-full" aria-label="Call us">
                     <i class="fas fa-phone" aria-hidden="true"></i>
-                    <span class="font-medium">Call: 070834 77028</span>
+                    <span class="contact-label font-medium">Call: 070834 77028</span>
                 </a>
-                <a href="https://wa.me/917083477028?text=Hi%20—%20I'd%20like%20a%20homepage%20demo%20for%20my%20studio.%20My%20name%20is%20____%2C%20location%20____." target="_blank" class="flex items-center space-x-2 bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors" aria-label="Contact us on WhatsApp">
+                <a href="https://wa.me/917083477028?text=Hi%20—%20I'd%20like%20a%20homepage%20demo%20for%20my%20studio.%20My%20name%20is%20____%2C%20location%20____." target="_blank" class="contact-link flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors" aria-label="Contact us on WhatsApp">
                     <i class="fab fa-whatsapp" aria-hidden="true"></i>
-                    <span>WhatsApp</span>
+                    <span class="contact-label">WhatsApp</span>
                 </a>
-                <a href="#contact" class="flex items-center space-x-2 text-charcoal hover:text-terracotta transition-colors" aria-label="View location map">
+                <a href="#contact" class="contact-link flex items-center gap-2 text-charcoal hover:text-terracotta transition-colors px-4 py-2 rounded-full" aria-label="View location map">
                     <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-                    <span>Map</span>
+                    <span class="contact-label">Map</span>
                 </a>
             </div>
             <div>
-                <a href="#portfolio" class="bg-charcoal text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-colors inline-flex items-center space-x-2">
+                <a href="#portfolio" class="contact-link bg-charcoal text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-colors inline-flex items-center gap-2">
                     <i class="fas fa-camera"></i>
-                    <span>See Portfolio</span>
+                    <span class="contact-label">See Portfolio</span>
                 </a>
             </div>
         </div>
